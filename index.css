@@ -22,13 +22,14 @@ COLORS */
 h1, h2, h3, h4, h5, h6, strong {
   font-weight: var(--bold-weight);
 }
-  font-color: red;
+H3 {
+	font-style:  italic;
+	color: #e94e4e;
+}
 nav {
   font-size: var(--font-smaller);
 }
 body {
   font-size: var(--font-normal);
+  font-family:  var(--text);
 }
-a {
-  font-color: blue;
-  }
