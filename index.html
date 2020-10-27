@@ -8,7 +8,7 @@
   <body>
     <header class="site-title">
       <h2 class="site-title-name">Athena Scott</h2>
-    <nav class="header-nav">
+	  <nav class="header-nav">
       <ul class="header-nav-list">
         <li class="header-nav-list-item"><a href="">Home</a></li>
         <li class="header-nav-list-item"><a href="">About</a></li>
@@ -26,19 +26,59 @@
     <main>
       <section class="intro">
         <h1 class="intro-bio">Athena Scott is a writer, editor, artist and independent researcher.</h1>
-        <h2 class="intro-bio-interests">Interested in community-led energy transitions, botany, architecture theory and history, solarpunk, web development, minimalism, and productivity.</h2>
+        <p class="intro-bio-interests">Interested in community-led energy transitions, botany, architecture theory and history, solarpunk, web development, minimalism, and productivity.</p>
       </section>
-	  <section class="portfolio"
+	  <section class="portfolio">
 	  	<article class="portfolio-section" id="current">
-			<h3 class="portfolio-head" id="current">Currently:</h2>
-			<ul class="portfolio-list" id="current">
-				<li class="portfolio-list-item">asking (and trying to answer) some <a href="">Climate Questions</a></li>
-				<li class="portfolio-list-item">writing 50,000 words with <a href="">NaNoWriMo</a></li>
-				<li class="portfolio-list-item">learning web development <a href="">from the ground up</a></li>
-				<li class="portfolio-list-item">taking walks in <a href="">Ravenna Park</a></li>
-			</ul>
+			<h3 class="portfolio-head" id="current">Currently:</h3>
+			<div class="wrap-collapsible" >
+		  		<input id="climate-q" class="toggle" type="checkbox">
+		  		<label for="climate-q" class="lbl-toggle">Asking (and trying to answer) some <a href="http://">Climate Questions</a></label>
+		  		<div class="collapsible-content">
+		  			<div class="content-inner">
+		  				<p>
+		  					(placeholder text)
+		  				</p>
+		  			</div>
+		  		</div>
+			</div>
+			  	
+		  	<div class="wrap-collapsible">
+		  		<input id="nanowrimo" class="toggle" type="checkbox">
+		  		<label for="nanowrimo" class="lbl-toggle">Writing 50,000 words with <a href="http://">NaNoWriMo</a></label>
+		  		<div class="collapsible-content">
+		  			<div class="content-inner">
+		  				<p>
+		  					(placeholder text)
+		  				</p>
+		  			</div>
+		  		</div>
+		  	</div>			
+		
+		  	<div class="wrap-collapsible">
+		  		<input id="web-dev" class="toggle" type="checkbox">
+		  		<label for="web-dev" class="lbl-toggle">Learning <a href="http://">web development</a> from the ground up.</label>
+		  		<div class="collapsible-content">
+		  			<div class="content-inner">
+		  				<p>
+		  					(placeholder text)
+		  				</p>
+		  			</div>
+		  		</div>
+		  	</div>			
+		
+		  	<div class="wrap-collapsible">
+		  		<input id="ravenna" class="toggle" type="checkbox">
+		  		<label for="ravenna" class="lbl-toggle">Taking walks in <a href="http://">Ravenna Park</a></label>
+		  		<div class="collapsible-content">
+		  			<div class="content-inner">
+		  				<p>
+		  					(placeholder text)
+		  				</p>
+		  			</div>
+		  		</div>
+		  	</div>			
         </article>
-	  <section class="portfolio" id="etc">
 	  	<article class="portfolio-section" id="other">
 	  		<h3 class="portfolio-head" id="other">Other Things:</h3>
 	  		<ul class="portfolio-list" id="other">
@@ -66,15 +106,16 @@
 	  		</ul>
 	  	</article>
 	  </section>
-	  <section>
-	  	<h2 class="intro-bio-interests">
+	  <section class="contact">
+	  	<h2 class="contact-bio-interests">
 	  		Looking for opportunities to work in energy communications, with an emphasis on community engagement and cooperative education. I also edit any kind of text you wanna throw at me.
 	  	</h2>
+
 	  	<h1 class="contact-link"><a href="">Get in Touch —></a></h1>
 	  </section>
 	  
     </main>
-    <footer>
+    <footer class="footer">
 		<article class="footer-text" id="news">
 			<p>I send out virtual care packs weekly.</p>
 			<input type="email" name="newsletter" value="Email Address" />
