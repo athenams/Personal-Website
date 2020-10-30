@@ -1,17 +1,25 @@
 /*———————— Root Styles —————————*/
 :root {
   
-  --text: 'Menlo', monospace;
+  --text: 'Mononoki', 'Menlo', monospace;
+  --textH1:  'La Lemonti', serif;
+  --textH2: serif;
 
-  --font-large: 16px;
-  --font-normal: 12px;
-  --font-small: 11px;
-  --font-smaller: 10px;
+  --font-large: 5em;
+  --font-normal: 16px;
+  --font-small: 14px;
+  --font-smaller: 12px;
 
   --normal-weight: 300;  /* Switch to 300 if you want thinner default text */
   --bold-weight: 600;    /* Switch to 600 or 700 if you want thicker bold text */
   
-  --background-accent: #d0caca;
+  --background-accent: #C9772C;
+  --background-color: #B8D8F9;
+  
+  --font-color: #817E2C;
+  --font-bold-color: #817E2C;
+  --link-color: #817E2C;
+  --link-hover-color: #E4DE71;
 }
 
 /*------------------- COLORS --------------------- 
@@ -19,36 +27,56 @@
 
 
 H1 {
-	font-size: 1em;
-	font-family: var(--text);
+	font-size: var(--font-large);
+	font-family: var(--textH1);
 	font-weight: var(--bold-weight);
+	text-transform: uppercase;
+	color: var(--font-bold-color);
 }
 
 H2 {
-	font-size: 1em;
-	font-family: var(--text);
+	font-size: 2em;
+	font-family: var(--textH2);
 	font-weight: var(--bold-weight);
+	color: var(--font-bold-color);
 }
 H3 {
-	font-family: var(--text);
-	font-size: 1em;
+	font-family: var(--textH2);
+	font-size: 1.5em;
 	font-weight: var(--bold-weight);
+	color: var(--font-bold-color);
 }
 H4 {
 	font-family: var(--text);
 	font-weight: var(--bold-weight);
+	color: var(--font-color);
 }
 nav, .footer-text{
   font-size: var(--font-smaller);
+  color: var(--font-color);
 }
 body {
+  /*Background-image: var(--background-color);*/
+  background-color:  var(--background-color);
   font-size: var(--font-normal);
   font-family:  var(--text);
   font-weight: var(--bold-normal);
+  color: var(--font-color);
 }
 
 strong {
 	font-weight: var(--bold-weight);
+	color: var(--font-bold-color);
+}
+
+a {
+	color: var(--link-color);
+	text-decoration: none;
+	border-bottom: .3em solid var(--link-hover-color);
+}
+a:hover {
+	color: var(—text);
+	background-color: var(--link-hover-color)
 }
 
 ul {
@@ -72,8 +100,9 @@ body {
 	padding: 2em;
 	border: 2px;
 	border-style: solid;
-	border-color: black;
+	border-color: var(--background-accent);
 	border-radius: 3px;
+
 }
 .intro {
 	/*background-color: rgba(229, 173, 173, 0.42);*/
@@ -82,7 +111,7 @@ body {
 	padding: 2em;
 	border: 2px;
 	border-style: solid;
-	border-color: black;
+	border-color: var(--background-accent);
 	border-radius: 3px;
 }
 .portfolio {
@@ -92,7 +121,7 @@ body {
 	padding: 2em;
 	border: 2px;
 	border-style: solid;
-	border-color: black;
+	border-color: var(--background-accent);
 	border-radius: 3px;
 }
 #current.portfolio-section {
@@ -101,7 +130,7 @@ body {
 	padding: 2em;
 	border: 2px;
 	border-style: solid;
-	border-color: black;
+	border-color: var(--background-accent);
 	border-radius: 5px;
 }
 #other.portfolio-section,
@@ -111,7 +140,7 @@ body {
 	padding: 2em;
 	border: 2px;
 	border-style: solid;
-	border-color: black;
+	border-color: var(--background-accent);
 	border-radius: 5px;
 }
 .contact {
@@ -120,7 +149,7 @@ body {
 	padding: 2em;
 	border: 2px;
 	border-style: solid;
-	border-color: black;
+	border-color: var(--background-accent);
 	border-radius: 3px;
 }
 .footer {
@@ -129,7 +158,7 @@ body {
 	padding: 2em;
 	border: 2px;
 	border-style: solid;
-	border-color: black;
+	border-color: var(--background-accent);
 	border-radius: 3px;
 }
 main {
@@ -238,19 +267,7 @@ Footer {
 
 /*------------------------------------- General Body Styling */
 
-/*------------------- list styling */
-.portfolio-list-item {
-	display: block;
-	line-height: 1.25em;;
-}
 
-.portfolio-list-item:before {
-	content: "- ";
-	text-indent: -1px;
-}
-.portfolio-list {
-	padding: 1;
-}
 /*------------------- collapsible content */
 
 /*------------------- checkbox */
@@ -269,17 +286,17 @@ input[type='checkbox'] {
 	padding: 1em;
 	margin-top: 1em;
 
-	color: black;
+	color: var(--font-bold-color);
 
-	border: 1px solid #333;
-	border-right: 1.5px solid #333;
-	border-bottom: 1.5px solid #333;
+	border: 1px solid var(--background-accent);
+	border-right: 1.5px solid var(--background-accent);
+	border-bottom: 1.5px solid var(--background-accent);
 	border-radius:7px;
 	transition: all 0.25s ease-out;
 }
 
 .lbl-toggle:hover {
-	color: grey;
+	color: var(--font-color);
 }
 
 /*------------------- arrow */
@@ -301,9 +318,9 @@ input[type='checkbox'] {
 /*------------------- inner content */
 .collapsible-content .content-inner {
 	background: 000;
-	border-left: 1px solid #333;
-	  Border-right: 1.5px solid #333;
-	  border-bottom: 1.5px solid #333;
+	border-left: 1px solid var(--background-accent);
+	  Border-right: 1.5px solid var(--background-accent);
+	  border-bottom: 1.5px solid var(--background-accent);
 	
 	  border-bottom-left-radius: 7px;
 	  border-bottom-right-radius: 7px;
