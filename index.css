@@ -133,8 +133,8 @@ body {
 	border-color: var(--background-accent);
 	border-radius: 5px;
 }
-#other.portfolio-section,
-#upcoming.portfolio-section,
+#services.portfolio-section,
+#clients.portfolio-section,
 #past.portfolio-section {
 	/*background-color: pink;*/
 	padding: 2em;
@@ -142,6 +142,13 @@ body {
 	border-style: solid;
 	border-color: var(--background-accent);
 	border-radius: 5px;
+}
+#services {
+	grid-area: services;
+}
+
+#clients {
+	grid-area: clients;
 }
 .contact {
 	/*background-color:  rgba(189, 160, 239, 0.55);*/
@@ -190,10 +197,9 @@ main {
 .portfolio {
 	display:  grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: repeat(2, auto);
+	grid-template-rows: repeat(1, auto);
 	grid-template-areas:
-	"current current current"
-	"other upcoming past";
+	"services clients past";
 	grid-gap: 2em;
 }
 
@@ -203,9 +209,8 @@ main {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr 1fr 1fr;
 		grid-template-areas:
-		"current"
-		"other"
-		"upcoming"
+		"services"
+		"clients"
 		"past";
 	}
 	main {
@@ -217,10 +222,9 @@ main {
 	.portfolio {
 		display:  grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: 1fr;
 		grid-template-areas:
-		"current current current"
-		"other upcoming past";
+		"services clients past";
 	}
 }
 
@@ -348,6 +352,3 @@ input[type='checkbox'] {
 	  border-bottom-left-radius: 0;
 	  text-transform: capitalize;
 }
-
-
-
